@@ -22,19 +22,19 @@ const Logo = () => {
     const footPrintImg = `/images/footprint${useColorModeValue('', '-dark')}.png`
 
     return (
-        <Link href="">
-            
+        <Link legacyBehavior href="">
+            <a>
                 <LogoBox>
                     <Image src={footPrintImg} width={20} height={20} alt='logo'/>
-                <text 
+                <Text 
                     color={useColorModeValue('gray.800', 'whiteAlpha.900')}
                     fontFamily='M PLUS Rounded 1c'
-                    fonteWeight="bold"
+                    fontWeight="bold"
                     ml={3}>
                         calvinkodalo
-                    </text>
+                    </Text>
                 </LogoBox>
-            
+            </a>
 
         </Link>
     )

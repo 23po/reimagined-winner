@@ -1,4 +1,5 @@
 import Logo from './logo'
+
 import NextLink from 'next/link'
 import {
     Container,
@@ -84,6 +85,28 @@ const Navbar = props => {
                     <IoLogoGithub/>
                 </LinkItem> */}
                 </Stack>
+                <Box flex = {1} align="right">
+                    <Box ml={2} display={{base: 'inline-block', md: 'none'}}>
+                    <Menu>
+                        <MenuButton
+                        as ={IconButton}
+                        icon={<HamburgerIcon />}
+                        variant="outline"
+                        aria-label="Options"/>
+                        <MenuList>
+                            <NextLink href="/" passHref>
+                                <MenuItem as={Link}>About</MenuItem>
+                            </NextLink>
+                            <NextLink href = "/works" passHref>
+                                <MenuItem as={Link}>works</MenuItem>
+                            </NextLink>
+                            <NextLink href="posts" passHref>
+                                <MenuItem as={Link}>Posts</MenuItem>
+                            </NextLink>
+                        </MenuList>
+                    </Menu>
+                    </Box>
+                </Box>
 
             </Container>
         </Box>
